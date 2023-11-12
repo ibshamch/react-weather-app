@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import Homepage from "../routes/Homepage";
+import { Link } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Clouds } from "./Clouds";
 import { Farenheit } from "./Farenheit";
@@ -7,7 +8,11 @@ import { Celcius } from "./Celcius";
 const App = () => {
   return (
     <BrowserRouter>
-      <h1>Weather App</h1>
+      <h1>
+        <Link className="link" to="/">
+          Weather App
+        </Link>
+      </h1>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/clouds" element={<Clouds />} />
